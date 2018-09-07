@@ -47,26 +47,6 @@ div#header {
 	width: calc(100% - 40px);
 }
 
-.padding {
-	padding: 0px 30px;
-}
-
-.light {
-	color: #888;
-}
-
-.flex.wrap {
-	flex-wrap: wrap;
-}
-
-.thin {
-	font-weight: 300;
-}
-
-.no-margin {
-	margin: 0 !important;
-}
-
 div#header h1 {
 	font-weight: normal;
 	font-weight: 300;
@@ -79,7 +59,7 @@ div#body {
 
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;
+	align-items: center;
 }
 
 .clip {
@@ -88,16 +68,53 @@ div#body {
 	
 }
 
+.active {
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05);
+}
+
 .clip-top {
 	-webkit-clip-path: polygon(0 30%, 1600px 0, 100% 100%, 0 80%);
 	clip-path: polygon(0 30%, 1600px 0, 100% 100%, 0 80%);
 }
 
+.clip-top-only {
+	-webkit-clip-path: polygon(0 0, 1600px 30%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 1600px 30%, 100% 100%, 0 100%);
+}
+
+.padding {
+	padding: 0px 30px;
+}
+
+.light {
+	color: #888;
+}
+
+.thin {
+	font-weight: 300;
+}
+
+.no-margin {
+	margin: 0 !important;
+} 
+
+.flex.wrap {
+	flex-wrap: wrap;
+}
+
 div#body div.card {
-	width: 400px;
+	max-width: 400px;
+	min-width: 300px;
+
+	flex-grow: 1;
+
+	flex-basis: 300px;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1), -webkit-transform 0.3s;
+	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1), transform 0.3s;
+	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1), transform 0.3s, -webkit-transform 0.3s;
 
 	border-radius: 5px;
 
@@ -107,8 +124,41 @@ div#body div.card {
 	margin: 10px;
 }
 
+.icon-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.icon-row.padding {
+	padding: 0px 40px;
+}
+
+.clip-circle {
+	-webkit-clip-path: ellipse(70% 100% at 50% 0%);
+	clip-path: ellipse(70% 100% at 50% 0%);
+}
+
+.icon-row i {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	margin-right: 10px;
+}
+.icon-row h2, .icon-row h4 {
+	margin: 0 !important;
+}
+
 div#body div.small-card {
-	width: 200px;
+	max-width: 300px;
+	min-width: 200px;
+
+	flex-grow: 1;
+
+	flex-basis: 200px;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
@@ -136,11 +186,11 @@ div#body p {
 	font-size: 20px;
 	line-height: 1.25em;
 	text-align: justify;
-	padding: 0 30px;
+	padding: 0px 30px !important; 
 }
 
-div#body div.card:hover, div#body div.small-card:hover {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+div#body div.card:hover, div#body div.small-card:hover, .active	 {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
 }
 
 div.large-card h2, div.large-card h4, div.card h2, div.card h4, div.card h3 {
@@ -251,6 +301,10 @@ div#footer input[type="submit"] {
 
 .flex.center {
 	align-items: center;
+}
+
+.flex.justify-center {
+	justify-content: center;
 }
 
 .flex.right {
