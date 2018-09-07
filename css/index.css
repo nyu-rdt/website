@@ -88,13 +88,21 @@ div#body {
 	
 }
 
+.flex.justify-center {
+	justify-content: center;
+}
+
 .clip-top {
 	-webkit-clip-path: polygon(0 30%, 1600px 0, 100% 100%, 0 80%);
 	clip-path: polygon(0 30%, 1600px 0, 100% 100%, 0 80%);
 }
 
 div#body div.card {
-	width: 400px;
+	max-width: 400px;
+	min-width: 300px;
+
+	flex-basis: 300px;
+	flex-grow: 1;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
@@ -137,6 +145,7 @@ div#body p {
 	line-height: 1.25em;
 	text-align: justify;
 	padding: 0 30px;
+	margin: 0.5em 0; 
 }
 
 div#body div.card:hover, div#body div.small-card:hover {
