@@ -17,6 +17,9 @@
   		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   		<link href="css/index.css" rel="stylesheet" type="text/css">
   		<link rel="stylesheet" href="font-awesome/css/all.css">
+
+  		<!-- icon -->
+  		<link rel="icon" href="../img/icon.png">
 	</head>
 	<body>
 		<div id="header">
@@ -57,7 +60,7 @@
 						<h4 style="font-weight: normal;">We inspire students of all ages to pursue a STEM career through community mentorship.  In 2017 - 2018, our team contributed a total of 1,800 hours of community service.</h4>
 						<div class="padding flex row between" style="align-items: flex-end; flex-grow: 1; margin-top: 30px;">
 							<div></div>
-							<a href="https://facebook.com/nyurdt">LEARN MORE ABOUT OUR OUTREACH</a>
+							<a href="./outreach">LEARN MORE ABOUT OUR OUTREACH</a>
 						</div>
 						<div></div>
 					</div>
@@ -78,7 +81,7 @@
 			<div class= "padding">
 				<div style="width: 100%; max-width: 1250px; margin: 0 auto; margin-top: 200px; background: #fff;" class="large-card">
 					<div class="flex row center padding" style="margin-bottom: 30px;">
-						<img src="img/rmc.jpeg" style="height: 100px; width: 100px; margin-left: 40px;">
+						<img src="img/rmc.jpeg" style="height: 100px; width: 100px; margin-left: 0px;">
 						<div>
 							<h2>The NASA Robotic Mining Competition</h2>
 							<h4 style="font-weight: normal; color: #444">Design it, Build it, Dig it</h4>
@@ -141,7 +144,7 @@
 					</div>		 -->		
 				</div>
 				<h1 class = "padding" style="margin-bottom: 0; position: relative; z-index: 1; max-width: 1250px; width: calc(100% - 60px)">Meet Our Team</h1>
-				<p style="position: relative; z-index: 1; max-width: 1250px"><strong>The NYU Robotic Design Team</strong> is a diverse set of students from New York University's Robotic Design Team. Our members vary in both experience and cultural background, but we work together great nonetheless.</p>
+				<p style="position: relative; z-index: 1; max-width: 1250px"><strong>The NYU Robotic Design Team</strong> is a diverse set of students from New York University's Tandon School of Engineering. Our members vary in both experience and cultural background, but we work together great nonetheless.</p>
 				<p style="position: relative; z-index: 1; max-width: 1250px">Our team is divided into three engineering departments: Mechanical Engineering, Electrical / Computer Engineering, and Software Engineering. Each department is led by an engineering lead. Additionally, our senior leadership is rounded out by a communications lead and an outreach lead. Students work on the components of the robot consitent with their interests and major area.</p>
 				<div class="flex row right padding" style=" max-width: 1250px; width: 100%; position: relative; z-index: 1; margin-right: 40px; margin-top: 20px;">
 					<a href="./team"><strong>MEET OUR TEAM</strong></a>
@@ -152,14 +155,16 @@
 			<div class="flex row center between wrap">
 				<div class="flex col">
 					<img src="img/rdt-saw.png">
-					<div style="margin-left: 5px; margin-top: 10px;"><a href="./team">OUR TEAM</a> | <a href="./projects">OUR ROBOTS</a> | <a href="https://facebook.com/nyurdt">OUR OUTREACH</a> | <a href="http://engineering.nyu.edu">NYU TANDON</a></div>
+					<div style="margin-left: 5px; margin-top: 10px;"><a href="./team">OUR TEAM</a> | <a href="./projects">OUR ROBOTS</a> | <a href="./outreach">OUR OUTREACH</a> | <a href="http://engineering.nyu.edu">NYU TANDON</a></div>
 				</div>
 				<!-- Begin MailChimp Signup Form -->
 				<div style="margin-bottom: 10px">
 					<form action="https://nyu.us19.list-manage.com/subscribe/post?u=198c711dcaa522503656695e3&amp;id=8e06a0d497" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<h4>STAY IN THE LOOP ABOUT RDT NEWS</h4>
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+						<div style="display: flex; flex-direction: row;">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="flex-grow: 1">
+							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+						</div>
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_198c711dcaa522503656695e3_8e06a0d497" tabindex="-1" value=""></div>
 					</form>
 					<!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
@@ -181,5 +186,10 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			window.addEventListener("resize", function() {
+				document.getElementById("body").style.marginTop = document.getElementById("header").getBoundingClientRect().height + "px";
+			});
+		</script>
 	</body>
 </html>

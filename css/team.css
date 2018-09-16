@@ -23,6 +23,18 @@ a:hover {
 	color: #2200CC;
 }
 
+.team1[active-team="team1"] .hider:not(.team1-show) {
+	display: none;
+}
+
+.team2[active-team="team2"] .hider:not(.team2-show) {
+	display: none;
+}
+
+.team3[active-team="team3"] .hider:not(.team3-show) {
+	display: none;
+}
+
 div#header {
 	flex-shrink: 0;
 	flex-grow: 0;
@@ -59,18 +71,18 @@ div#body {
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 }
 
 .clip {
-	-webkit-clip-path: polygon(0 0, 1600px 0, 1600px 60%, 0 100%);
-	clip-path: polygon(0 0, 1600px 0, 1600px 60%, 0 100%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
 	
 }
 
-.active {
-	-webkit-transform: scale(1.05);
-	        transform: scale(1.05);
+.card:not(.active) {
+	-webkit-transform: scale(0.98);
+	        transform: scale(0.98);
 }
 
 .clip-top {
@@ -79,8 +91,8 @@ div#body {
 }
 
 .clip-top-only {
-	-webkit-clip-path: polygon(0 0, 1600px 30%, 100% 100%, 0 100%);
-	clip-path: polygon(0 0, 1600px 30%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 0, 1600px 250px, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 1600px 250px, 100% 100%, 0 100%);
 }
 
 .padding {
@@ -104,12 +116,9 @@ div#body {
 }
 
 div#body div.card {
-	max-width: 400px;
-	min-width: 300px;
+	width: 400px;
 
-	flex-grow: 1;
-
-	flex-basis: 300px;
+	flex-shrink: 0;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1), -webkit-transform 0.3s;
@@ -121,14 +130,37 @@ div#body div.card {
 	padding: 30px 0px;
 	overflow: hidden;
 
-	margin: 10px;
+	margin: 5px;
+}
+
+span.badge {
+	background: #f8f8f8;
+	border: 1px solid #888;
+	display: inline-block;
+	color: #444;
+	padding: 10px 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+span.badge:not(.selected):hover {
+	border: 1px solid #000;
+	color: #000;
+}
+
+span.badge.selected {
+	background: #dec4ef;
+	border: 1px solid #7d44a3;
+	color: #7d44a3;
 }
 
 .icon-row {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	margin-left: 30px;
+	margin-left: 0px;
+	padding: 0 20px;
 	margin-bottom: 10px;
 	align-items: center;
 }
@@ -142,6 +174,18 @@ div#body div.card {
 	clip-path: ellipse(70% 100% at 50% 0%);
 }
 
+.clip-bottom-cirlce {
+	position: absolute;
+	z-index: 0;
+	top:100%;
+	left: 0;
+	right: 0;
+	bottom: -50px;
+	background: #f8f8f8;
+	-webkit-clip-path: ellipse(50% 100% at 50% 0%);
+			clip-path: ellipse(50% 100% at 50% 0%);
+}
+
 .icon-row i {
 	display: inline-block;
 	width: 20px;
@@ -153,12 +197,7 @@ div#body div.card {
 }
 
 div#body div.small-card {
-	max-width: 300px;
-	min-width: 200px;
-
-	flex-grow: 1;
-
-	flex-basis: 200px;
+	width: 250px;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
@@ -185,7 +224,7 @@ div#body div.large-card {
 div#body p {
 	font-size: 20px;
 	line-height: 1.25em;
-	text-align: justify;
+	text-align: left;
 	padding: 0px 30px !important; 
 }
 
