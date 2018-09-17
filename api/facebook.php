@@ -27,7 +27,7 @@ $authToken = fetchUrl("https://graph.facebook.com/oauth/access_token?grant_type=
 
 $tokenString = json_decode($authToken)->access_token;
 
-$json_object = fetchUrl("https://graph.facebook.com/{$profile_id}/feed?access_token={$tokenString}&fields=attachments,link,message,picture,created_time,name&limit=25");
+$json_object = fetchUrl("https://graph.facebook.com/{$profile_id}/feed?access_token={$tokenString}&fields=attachments,link,message,full_picture,created_time,name&limit=25");
 
 $feedarray = json_decode($json_object);
 

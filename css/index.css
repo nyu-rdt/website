@@ -23,6 +23,51 @@ a:hover {
 	color: #2200CC;
 }
 
+div.news-div {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items:stretch;
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	position: relative;
+	z-index: 1;
+}
+
+div.news-div div.card-body-div {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+div.news-div div.small-card:first-child {
+	margin-left: 30px;
+}
+div.news-div div.small-card:last-child {
+	margin-right: 30px;
+}
+
+div.news-div div.small-card{
+	flex-shrink: 0;
+	max-height: 300px;
+}
+
+div.news-div div.small-card .img-container {
+	max-height: 150px;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+div.news-div div.small-card .img-container img {
+	height: auto !important;
+	flex-shrink: 0;
+}
+
 div#header {
 	flex-shrink: 0;
 	flex-grow: 0;
@@ -115,7 +160,8 @@ div#body div.card {
 	margin: 10px;
 }
 
-div#body div.small-card {
+
+div.small-card {
 	width: 200px;
 
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -148,7 +194,7 @@ div#body p {
 	margin: 0.5em 0; 
 }
 
-div#body div.card:hover, div#body div.small-card:hover {
+div.card:hover, div#body div.small-card:hover {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -168,6 +214,10 @@ div.large-card p {
 div.card img, div.small-card img {
 	margin-bottom: 20px;
 	width: 100%;
+}
+
+div.small-card img {
+	max-height: 200px;
 }
 
 div#footer {

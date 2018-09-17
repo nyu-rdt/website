@@ -361,7 +361,7 @@ $settings = array(
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-$getfield = '?screen_name=nyurdt&count=20';
+$getfield = '?screen_name=nyurdt&count=20&';
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 $statuses = $twitter->setGetfield($getfield)
@@ -372,7 +372,6 @@ $finArr = array();
 
 foreach (json_decode($statuses) as $s) {
   $array = array();
-  
   $array["time"]= date("F j, Y", strtotime($s->created_at));
   $array["time_raw"] = strtotime($array["time"]);
   $array["message"] = $s->text;
@@ -422,7 +421,7 @@ $feedarray = json_decode($json_object);
 // echo $json_object;
 
 $array = array();
-
+// print_r($feedarray->data[0]->attachments->data[0]->subattachments->data[0]->media->image->src);
 foreach ( $feedarray->data as $feed_data )
 {
   $tempArray = array();
@@ -438,9 +437,11 @@ foreach ( $feedarray->data as $feed_data )
   }
   if (isset($feed_data->picture)) {
     $tempArray["picture"] = html_entity_decode($feed_data->picture, ENT_COMPAT, 'UTF-8');
+    // $tempArray["picture"] = html_entity_decode($feed_data->attachments->data[0]->subattachments->data[0]->media->image->src, ENT_COMPAT, 'UTF-8');
   } else {
     $tempArray["picture"] = "false";
   }
+
   $tempArray["time"] = date("F j, Y", strtotime($feed_data->created_time));
   $tempArray["type"] = "facebook";
   $tempArray["time_raw"] = strtotime($tempArray["time"]);
