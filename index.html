@@ -26,6 +26,30 @@
 
 		<!-- javascript -->
 		<script src="./index.js"></script>
+
+		<style>
+			.spotlight .bottom {
+				position: absolute;
+				bottom: 300px;
+				right: 0px;
+				left: 0px;
+				color:#fff;
+				padding: 20px;
+				font-size: 24px;
+				background: rgba(0,0,0,0.6);
+				text-align: center;
+			}
+			.spotlight .top {
+				position: absolute;
+				top: 100px;
+				left: 50%;
+				transform: translateX(-50%);
+				color:#fff;
+				padding: 20px;
+				font-size: 24px;
+				background: rgba(0,0,0,0.6);
+			}
+		</style>
 	</head>
 	<body>
 		<div id="header">
@@ -33,8 +57,12 @@
 			<a href="http://engineering.nyu.edu"><img src="img/nyu.png"></a>
 		</div>
 		<div id="body">
-			<div style="width: 100%; position: relative;">
-				<img src="img/team.jpg" style="width: 100%;">
+			<div style="width: 100%; position: relative; max-height: 800px; overflow-y: hidden; background-image:url('./img/powerup.jpg'); background-attachment: fixed; background-size: cover; background-repeat: no-repeat; background-position: center center; ">
+				<img src="img/powerup.jpg" style="; visibility:hidden; width: 100%;">
+				<div class="spotlight">
+					<!-- <div class="top"><img src="/img/icon-white.png"></div> -->
+					<div class="bottom"><img src="/img/icon-white.png"><br>Come join us for the 3<sup>rd</sup> Annual Hudson Valley Rally Robotics Competition Hosted by the NYU Robotic Design Team at NYU Tandon's School of Engineering on <u>September 29, 2018 from 8:30 AM to 5:30 PM</u></div>
+				</div>
 			</div>
 			<div style="background: #f8f8f8; padding-top: 30px;" class="flex col center">
 				<h1 class="padding" style="max-width:1250px; width:calc(100% - 60px);">The New York University Robotic Design Team</h1>
