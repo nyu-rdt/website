@@ -33,8 +33,37 @@
 			<div style="position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 50px;">
 				<div class="clip-top-only" style="background: #f8f8f8; position: absolute; top:200px; left: 0; right: 0; bottom: 0; z-index: 0"></div>
 				<div class="clip-bottom-circle"></div>
-				<div class="flex row between padding" style="z-index: 1; position: relative; max-width: 1250px; width: 100%; overflow-x: auto; overflow-y: visible;">
-					<div class="card flex col active" id="orbit-1-button" style="background: #CCB4DC; padding-top: 0;">
+				<div class="flex row between padding" style="z-index: 1; position: relative; width: calc(100% - 60px); overflow-x: auto; overflow-y: visible;">
+					<div class="card flex col active" id="orbit-2-button" style="background: #CCB4DC; padding-top: 0;">
+						<img src="../img/orbit-2.png" class="profile">
+						<h3 style="margin-bottom: 5px;">ORBIT 2</h3>
+						<h4 style="font-weight: normal; color: #444">NASA Robotic Mining Competition 2019</h4>
+						<br>
+						<div class="icon-row">
+							<i class="fas fa-weight-hanging"></i>
+							<h4 style="font-weight: bold;">68kg</h4>
+						</div>
+						<div class="icon-row">
+							<i class="fas fa-ruler"></i>
+							<h4 style="font-weight: bold;">150cm x 75cm x 75cm</h4>
+						</div>
+						<div class="icon-row">
+							<i class="fas fa-dollar-sign"></i>
+							<h4 style="font-weight: bold;">$27,500</h4>
+						</div>
+						<div class="icon-row">
+							<i class="fas fa-bolt"></i>
+							<h4 style="font-weight: bold;">36V, 1- 36V LiPo Battery and 1- 22.5V LiPo Battery</h4>
+						</div>
+						<div class="icon-row">
+							<i class="fas fa-clock"></i>
+							<h4 style="font-weight: bold;">9 months of construction</h4>
+						</div>
+						<div class="flex row right" style="align-items: flex-end; flex-grow: 1; margin-right: 20px; margin-top: 10px;font-size: 20px;">
+							
+						</div>
+					</div>
+					<div class="card flex col" id="orbit-1-button" style="background: #CCB4DC; padding-top: 0;">
 						<img src="../img/robot.png" class="profile">
 						<h3 style="margin-bottom: 5px;">ORBIT 1</h3>
 						<h4 style="font-weight: normal; color: #444">NASA Robotic Mining Competition 2018</h4>
@@ -92,7 +121,7 @@
 							
 						</div>
 					</div>
-					<div class="card flex col" id="atlas-6-button" style="background: #CCB4DC; padding-top: 0;">
+					<div class="card flex col" id="atlas-6-button" style="background: #CCB4DC; padding-top: 0; margin-right:60px">
 						<img src="../img/atlas6.jpg" class="profile">
 						<h3 style="margin-bottom: 5px;">Atlas 6</h3>
 						<h4 style="font-weight: normal; color: #444">Prototype, NASA Robotic Mining Competition</h4>
@@ -122,9 +151,23 @@
 						</div>
 					</div>				
 				</div>
-				<div id="orbit-1" style="z-index:1; width: 100%; max-width: 1250px; padding: 50px 20px;">
+				<div id="orbit-2" style="z-index:1; width: 100%; max-width: 1250px; padding: 50px 20px;">
+					<h1 class="padding" style="margin: 5px 0; ">ORBIT 2</h1>
+					<h2 class="padding thin no-margin"><strong>O</strong>perational <strong>R</strong>obot <strong>B</strong>uilt <strong>I</strong>n <strong>T</strong>andon</h2>
+					<h3 class="light no-margin padding" style="margin-bottom: 10px;">NASA Robotic Mining Competition 2019</h3>
+					<p>The ORBIT 2 rover was designed to be a robust, high volume robotic miner for the NASA Robotic Mining Competition and an improvement of the ORBIT 1 design.  It employs the same excavation method as ORBIT 1, and can reach a theoretical mining rate of 2kg of BP-1 (Martian Regolith Simulant) per minute.</p>
+					<p>Rather than a single system like ORBIT 1, ORBIT 2 is a two rover system which split the rover's system's main functions (excavation and regolith transportation) into separate robots. </p>
+					<p>ORBIT 2, while a unique concept and a theoretical improvment to the previous ORBIT 1 design, it was a very complex undertaking and was not fully finished before the 2019 competition. While all portions of the robot performed well individually, the interfaces between the rovers need to be improved for future use. Nevertheless, the team placed 3rd overall in the 2019 NASA Robotic Mining Competition.</p>
+					<div class="flex row right">
+						<div class="flex col stretch" style="justify-content: flex-end; padding-top:25px;">
+							<a class="icon-row padding" href = "../img/docs/orbit_2_systems_paper.pdf" style="font-size: 18px; font-weight: bold;"><i class="fas fa-file"></i>READ THE AWARD WINNING ORBIT 2 TECHNICAL PAPER</a>
+							<a class="icon-row padding" href = "https://www.youtube.com/watch?v=ciUmj8fZggA" style="font-size: 18px; font-weight: bold; margin-top: 8px;"><i class="fas fa-video"></i>WATCH THE PROOF OF LIFE VIDEO</a>
+						</div>
+					</div>
+				</div>
+				<div id="orbit-1" style="display:none;z-index:1; width: 100%; max-width: 1250px; padding: 50px 20px;">
 					<h1 class="padding" style="margin: 5px 0; ">ORBIT 1</h1>
-					<h2 class="padding thin no-margin"><strong>O</strong>peration <strong>R</strong>obot <strong>B</strong>uilt <strong>I</strong>n <strong>T</strong>andon</h2>
+					<h2 class="padding thin no-margin"><strong>O</strong>perational <strong>R</strong>obot <strong>B</strong>uilt <strong>I</strong>n <strong>T</strong>andon</h2>
 					<h3 class="light no-margin padding" style="margin-bottom: 10px;">NASA Robotic Mining Competition 2018</h3>
 					<p>The ORBIT 1 rover was designed to be a robust, high volume robotic miner for the NASA Robotic Mining Competition.  It employed an adjustable, central excavation drum, mounted on a carbon fiber frame, and can reach a theoretical mining rate of 2kg of BP-1 (Martian Regolith Simulant) per minute.</p>
 					<p>The concept of the effectiveness of a "digging wheel" has been proved by the previous Atlas series miners.  The primary concept behind ORBIT 1's design is using a high torque, high speed central wheel to excavate and store collected regolith.  The original intention behind the design of ORBIT 1 was the use of a dual rover system, where the ORBIT 1 rover would serve solely for excavation, while a secondary rover would transport excavated regolith from the mining site to the deposition type, hence the small carrying capacity of the rover (10kg).</p>
@@ -160,17 +203,28 @@
 			</div>
 
 			<script>
+				var orbit2Content = document.getElementById('orbit-2');
 				var orbit1Content = document.getElementById('orbit-1');
 				var atlas7Content = document.getElementById('atlas-7');
 				var atlas6Content = document.getElementById('atlas-6');
 
+				var orbit2Button = document.getElementById('orbit-2-button');
 				var orbit1Button = document.getElementById('orbit-1-button');
 				var atlas7Button = document.getElementById('atlas-7-button');
 				var atlas6Button = document.getElementById('atlas-6-button');
 
-				var activeContent = orbit1Content;
-				var activeButton = orbit1Button;
+				var activeContent = orbit2Content;
+				var activeButton = orbit2Button;
 
+				orbit2Button.addEventListener('click', function() {
+					activeButton.className = activeButton.className.replace(" active", "");
+					orbit2Button.className += " active";
+					activeButton = orbit1Button;
+
+					activeContent.style.display = "none";
+					activeContent = orbit2Content;
+					activeContent.style.display = "block";
+				})
 				orbit1Button.addEventListener('click', function() {
 					activeButton.className = activeButton.className.replace(" active", "");
 					orbit1Button.className += " active";
